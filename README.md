@@ -4,16 +4,19 @@
 
 ![Smart City](https://img.shields.io/badge/Smart%20City-Traffic%20Management-blue)
 ![AI Powered](https://img.shields.io/badge/AI%20Powered-Computer%20Vision-green)
-![Cloud Platform](https://img.shields.io/badge/Cloud%20Platform-Django%20Backend-orange)
+![Cloud Platform](https://img.shields.io/badge/Cloud%20Platform-Django%20%2B%20React-orange)
 ![Real-time](https://img.shields.io/badge/Real--time-Data%20Processing-red)
+![Full Stack](https://img.shields.io/badge/Full%20Stack-Backend%20%2B%20Frontend-purple)
 
-_A comprehensive cloud-based intelligent traffic management system leveraging AI, IoT, and big data analytics_
+_A comprehensive cloud-based intelligent traffic management system leveraging AI, IoT, and big data analytics with modern full-stack architecture_
 
 </div>
 
 ## 🚀 Project Overview
 
 The **Smart City Traffic AI Cloud Platform** is an advanced, cloud-based intelligent traffic management system designed to revolutionize urban mobility through the integration of artificial intelligence, Internet of Things (IoT), and big data analytics. This platform provides real-time traffic monitoring, incident detection, congestion analysis, and predictive analytics to improve traffic flow and enhance public safety in smart cities.
+
+Built with a modern full-stack architecture, the system combines a robust Django backend with a responsive React frontend, creating a seamless user experience for traffic management professionals and city administrators.
 
 ## ✨ Key Features
 
@@ -22,62 +25,93 @@ The **Smart City Traffic AI Cloud Platform** is an advanced, cloud-based intelli
 - **Computer Vision**: Real-time vehicle detection and classification using YOLO models
 - **Incident Detection**: Automated emergency and incident identification from CCTV feeds
 - **Traffic Pattern Recognition**: Machine learning algorithms for traffic flow prediction
+- **Real-time AI Processing**: Live video stream analysis with instant incident alerts
 
 ### 📊 **Real-time Data Processing**
 
 - **Multi-source Integration**: CCTV cameras, IoT sensors, and drone imagery
 - **Live Streaming**: Real-time video stream processing and analysis
 - **Instant Alerts**: Real-time incident and congestion notifications
+- **Data Visualization**: Interactive charts and maps for traffic analytics
 
-### 🏗️ **Modular Architecture**
+### 🏗️ **Modern Full-Stack Architecture**
 
-- **Microservices Design**: Separate backend modules for different data sources
+- **Django Backend**: RESTful API with microservices design
+- **React Frontend**: Modern, responsive web interface with real-time updates
 - **Scalable Infrastructure**: Built for high-performance cloud deployment
-- **RESTful APIs**: Comprehensive API endpoints for frontend integration
+- **Modular Design**: Separate backend modules for different data sources
 
 ### 🔐 **Security & Authentication**
 
 - **JWT Authentication**: Secure user authentication and authorization
 - **Role-based Access**: Different access levels for traffic agents and public users
 - **Data Encryption**: Secure data transmission and storage
+- **Protected Routes**: Frontend route protection with authentication guards
 
 ## 📸 Demo Images
 
 Here are some screenshots of the IntelliCity dashboard and system components:
 
 ### **Dashboard Overview**
+
 ![Dashboard](./readme/dashboard.png)
 
 ### **Camera Monitoring**
+
 ![Camera](./readme/camera.png)
 
 ### **IoT Device Management**
+
 ![IoT](./readme/iot.png)
 
 ## 🏛️ System Architecture
 
-### **High-Level System Design**
+### **Full-Stack System Design**
+
+![System Architecure](./readme/architecture.png)
+*System Architecure Diagram*
+
+![UML Diagram](./readme/uml.png)
+*Class UML Diagram*
+
+### **Frontend Architecture (React)**
+
+The React frontend is built with modern web technologies and follows best practices:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    Frontend Applications                    │
+│                    App.js (Main Component)                 │
 ├─────────────────────────────────────────────────────────────┤
-│                    REST API Gateway                        │
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐          │
+│  │   Pages     │ │ Components  │ │   Utils     │          │
+│  │             │ │             │ │             │          │
+│  ├─────────────┤ ├─────────────┤ ├─────────────┤          │
+│  │ Dashboard   │ │ Sidebar     │ │ Map Utils   │          │
+│  │ CameraMgr   │ │ Topbar      │ │ Auth Utils  │          │
+│  │ IotMgr      │ │ Charts      │ │ API Utils   │          │
+│  │ DroneMgr    │ │ Tables      │ │             │          │
+│  └─────────────┘ └─────────────┘ └─────────────┘          │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### **Backend Architecture (Django)**
+
+The Django backend follows a microservices pattern with specialized modules:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                Django Project Core                         │
+│              (smartcity_backend)                           │
 ├─────────────────────────────────────────────────────────────┤
 │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌──────┐ │
-│  │   Camera    │ │    IoT      │ │   Drone     │ │ Data │ │
-│  │  Backend    │ │  Backend    │ │  Backend    │ │Backend│ │
+│  │   Auth      │ │   Camera    │ │    IoT      │ │Drone │ │
+│  │  System     │ │  Backend    │ │  Backend    │ │Backend│ │
 │  └─────────────┘ └─────────────┘ └─────────────┘ └──────┘ │
 ├─────────────────────────────────────────────────────────────┤
 │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐          │
-│  │   MySQL     │ │  MongoDB    │ │    Redis    │          │
-│  │  Database   │ │  Database   │ │   Cache     │          │
+│  │   Data      │ │   AI/ML     │ │   Celery    │          │
+│  │  Backend    │ │  Models     │ │   Tasks     │          │
 │  └─────────────┘ └─────────────┘ └─────────────┘          │
-├─────────────────────────────────────────────────────────────┤
-│                    AI/ML Processing                        │
-│  • YOLO Object Detection                                  │
-│  • Traffic Flow Prediction                                │
-│  • Incident Classification                                │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -170,96 +204,34 @@ The system utilizes a hybrid database approach for optimal performance:
 
 ## 🎯 Core System Components
 
-### **UML Class Architecture**
+### **Frontend Components (React)**
 
-Our system follows a well-structured object-oriented design:
+The React frontend provides a modern, interactive user interface:
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│    User     │    │   Manager   │    │CameraService│
-├─────────────┤    ├─────────────┤    ├─────────────┤
-│ email: str  │    │ email: str  │    │             │
-│ password:str│    │ password:str│    │             │
-├─────────────┤    ├─────────────┤    │             │
-│ retrieve()  │    │ update()    │    │             │
-│ AIanalysis()│    │ remove()    │    │             │
-└─────────────┘    │ add()       │    │             │
-       │           │ retrieve()  │    │             │
-       │           │ AIanalysis()│    │             │
-       └───────────┼─────────────┼────┘
-                    │             │
-                    ▼             ▼
-            ┌─────────────┐ ┌─────────────┐
-            │  AImodels   │ │DBprocessor  │
-            ├─────────────┤ ├─────────────┤
-            │ model:model │ │ db:database│
-            ├─────────────┤ ├─────────────┤
-            │ runModel()  │ │getDeviceInfo│
-            │ProcessingImg│ │getALLdevice│
-            │collisionDet │ │removeDevice│
-            │congestionDet│ │updateDevice│
-            └─────────────┘ └─────────────┘
-                    │             │
-                    └─────────────┼─────────────┐
-                                  ▼             ▼
-                        ┌─────────────┐ ┌─────────────┐
-                        │DeviceModel  │ │    data    │
-                        ├─────────────┤ ├─────────────┤
-                        │ID: str      │ │cameraID:str│
-                        │latitude:float│ │cameraLoc:str│
-                        │longitude:flt│ │collisionLoc│
-                        │index: str   │ │numCollision│
-                        │time: str    │ │num_vehicles│
-                        │image_url:str│ │vehicles_pos│
-                        │district: str│ └─────────────┘
-                        │address: str │
-                        └─────────────┘
-```
+- **Dashboard**: Real-time traffic monitoring and analytics
+- **Device Management**: Comprehensive control over cameras, IoT sensors, and drones
+- **Interactive Maps**: Google Maps integration with real-time device locations
+- **Real-time Charts**: Dynamic data visualization using Recharts
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
 
-### **Entity-Relationship Database Schema**
+### **Backend Services (Django)**
 
-Our database design supports complex relationships between users, devices, and events:
+The Django backend provides robust API services:
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│    users    │    │   cameras   │    │    iots     │
-├─────────────┤    ├─────────────┤    ├─────────────┤
-│ email       │    │ id          │    │ station_id  │
-│ password    │    │ latitude    │    │ address     │
-│ firstname   │    │ longitude   │    │ latitude    │
-│ lastname    │    │ index       │    │ longitude   │
-│ is_agent    │    │ time        │    │ district    │
-└─────────────┘    │ image_url   │    │ hourlySpeed │
-       │           │ address     │    │ enabled     │
-       │           │ district    │    └─────────────┘
-       │           │ enabled     │            │
-       │           │ video_url   │            │
-       └───────────┼─────────────┼────────────┘
-                    │             │
-                    ▼             ▼
-            ┌─────────────┐ ┌─────────────┐
-            │   drones    │ │  incidents  │
-            ├─────────────┤ ├─────────────┤
-            │ id          │ │ timestamp   │
-            │ latitude    │ │ latitude    │
-            │ longitude   │ │ longitude   │
-            │ altitude    │ │ device_type │
-            │ status      │ │ district    │
-            │ dist_id     │ └─────────────┘
-            │ video_url   │
-            └─────────────┘
-                    │
-                    ▼
-            ┌─────────────┐
-            │congestions  │
-            ├─────────────┤
-            │ timestamp   │
-            │ latitude    │
-            │ longitude   │
-            │ device_type │
-            │ district    │
-            └─────────────┘
-```
+- **Authentication System**: JWT-based user management and authorization
+- **Camera Backend**: CCTV data processing and AI analysis
+- **IoT Backend**: Sensor data management and analytics
+- **Drone Backend**: Aerial imagery processing and analysis
+- **Data Backend**: Dashboard analytics and reporting
+
+### **AI/ML Capabilities**
+
+Advanced machine learning models for traffic analysis:
+
+- **YOLO Object Detection**: Real-time vehicle detection and classification
+- **Traffic Flow Prediction**: LSTM neural networks for traffic forecasting
+- **Incident Classification**: Automated emergency situation detection
+- **Satellite Segmentation**: Road network analysis from aerial imagery
 
 ## 🔌 API Documentation
 
@@ -346,67 +318,132 @@ Our platform implements intelligent load balancing across multiple tiers:
 
 ## 🛠️ Technology Stack
 
+### **Frontend Technologies**
+
+- **React 18.2.0** - Modern JavaScript library for building user interfaces
+- **Tailwind CSS 3.4.1** - Utility-first CSS framework for rapid UI development
+- **React Router DOM 6.22.3** - Declarative routing for React applications
+- **Recharts 2.12.3** - Composable charting library for React
+- **Google Maps API** - Interactive maps and location services
+- **Material Tailwind** - Material Design components with Tailwind CSS
+
 ### **Backend Framework**
 
 - **Django 5.0.4** - High-level Python web framework
-- **Django REST Framework** - Powerful API development toolkit
+- **Django REST Framework 3.15.2** - Powerful API development toolkit
 - **Celery** - Asynchronous task queue for background processing
+- **Django CORS Headers** - Cross-origin resource sharing support
 
 ### **Databases**
 
 - **MySQL** - Primary relational database for structured data
-- **MongoDB** - NoSQL database for flexible data storage
+- **MongoDB 4.6.3** - NoSQL database for flexible data storage
 - **Redis** - In-memory cache and message broker
 
 ### **AI/ML Libraries**
 
-- **TensorFlow/Keras** - Deep learning framework
-- **Ultralytics YOLO** - Real-time object detection
-- **Scikit-learn** - Machine learning algorithms
-- **OpenCV** - Computer vision processing
+- **TensorFlow** - Deep learning framework
+- **Keras 2.13.1** - High-level neural networks API
+- **Ultralytics YOLO 8.2.78** - Real-time object detection
+- **Scikit-learn 1.3.1** - Machine learning algorithms
+- **NumPy 1.24.3** - Numerical computing library
+- **Pandas 2.0.3** - Data manipulation and analysis
 
-### **Data Processing**
+### **Data Processing & Utilities**
 
-- **Pandas** - Data manipulation and analysis
-- **NumPy** - Numerical computing
-- **PyJWT** - JSON Web Token authentication
+- **PyJWT 2.9.0** - JSON Web Token authentication
+- **Python-dotenv 1.0.1** - Environment variable management
+- **Pytz 2023.3** - Timezone calculations
 
 ## 📁 Project Structure
 
+### **Frontend Structure (React)**
+
 ```
-smartcity-backend/
-├── auth_system/           # User authentication & authorization
-├── camera_backend/        # CCTV camera data processing
-├── iot_backend/          # IoT sensor data management
-├── drone_backend/        # Drone imagery processing
-├── data_backend/         # Dashboard & analytics data
-├── smartcity_backend/    # Core project configuration
-│   ├── detection.py      # AI object detection models
-│   ├── iotAI.py         # IoT data prediction models
-│   └── celery.py        # Background task configuration
-├── static/               # AI models & static assets
-│   ├── best.pt          # YOLO traffic detection model
-│   ├── iot_model.h5     # IoT prediction model
-│   └── data/            # Training datasets
-└── requirements.txt      # Python dependencies
+CMPE281-Smartcity-React/
+├── public/                    # Static assets and HTML template
+├── src/                       # Source code
+│   ├── components/            # Reusable UI components
+│   │   ├── dashboard/         # Dashboard-specific components
+│   │   ├── pageLayout/        # Layout and navigation components
+│   │   └── ...                # Other component categories
+│   ├── pages/                 # Main application pages
+│   │   ├── auth/              # Authentication pages
+│   │   ├── Dashboard.jsx      # Main dashboard
+│   │   ├── CameraManager.jsx  # Camera management
+│   │   ├── IotManager.jsx     # IoT device management
+│   │   └── DroneManager.jsx   # Drone management
+│   ├── utils/                 # Utility functions and helpers
+│   ├── medias/                # Images and media assets
+│   ├── mockData/              # Sample data for development
+│   └── App.js                 # Main application component
+├── package.json               # Node.js dependencies
+└── tailwind.config.js         # Tailwind CSS configuration
+```
+
+### **Backend Structure (Django)**
+
+```
+CMPE281-Smartcity-Django/
+├── auth_system/               # User authentication & authorization
+├── camera_backend/            # CCTV camera data processing
+├── iot_backend/               # IoT sensor data management
+├── drone_backend/             # Drone imagery processing
+├── data_backend/              # Dashboard & analytics data
+├── smartcity_backend/         # Core project configuration
+│   ├── detection.py           # AI object detection models
+│   ├── iotAI.py              # IoT data prediction models
+│   ├── celery.py             # Background task configuration
+│   ├── settings.py            # Django project settings
+│   └── urls.py               # Main URL configuration
+├── static/                    # AI models & static assets
+│   ├── best.pt               # YOLO traffic detection model
+│   ├── iot_model.h5          # IoT prediction model
+│   └── data/                 # Training datasets
+├── manage.py                  # Django management script
+└── requirements.txt           # Python dependencies
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- **Python 3.8+**
+- **Node.js 16+** (for React frontend)
+- **Python 3.8+** (for Django backend)
 - **MySQL 8.0+**
 - **MongoDB 5.0+**
 - **Redis 6.0+**
 - **Git**
 
-### Installation
+### Frontend Setup (React)
 
-1. **Clone the repository**
+1. **Navigate to the React project directory**
 
    ```bash
-   git clone <repository-url>
+   cd CMPE281-Smartcity-React
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm start
+   ```
+
+4. **Access the frontend application**
+
+   - Frontend: `http://localhost:3000`
+
+### Backend Setup (Django)
+
+1. **Navigate to the Django project directory**
+
+   ```bash
    cd CMPE281-Smartcity-Django
    ```
 
@@ -424,6 +461,8 @@ smartcity-backend/
    ```
 
 4. **Database Setup**
+![ERD](./readme/erd.png)
+*MySQL ER Diagram*
 
    - Configure MySQL and MongoDB connections
    - Update database settings in `smartcity_backend/settings.py`
@@ -434,7 +473,18 @@ smartcity-backend/
    - Create `.env` file with necessary environment variables
    - Configure API keys and database credentials
 
-### Running the Application
+6. **Run Django Server**
+
+   ```bash
+   python manage.py runserver
+   ```
+
+7. **Access the backend API**
+
+   - Backend API: `http://localhost:8000`
+   - Admin Panel: `http://localhost:8000/admin`
+
+### Running the Complete System
 
 1. **Start Redis Server**
 
@@ -446,22 +496,27 @@ smartcity-backend/
 
    ```bash
    # Terminal 1: Celery Worker
+   cd CMPE281-Smartcity-Django
    celery -A smartcity_backend worker -l info --pool=solo
 
    # Terminal 2: Celery Beat Scheduler
+   cd CMPE281-Smartcity-Django
    celery -A smartcity_backend beat -l info
    ```
 
-3. **Run Django Server**
+3. **Start Django Backend** (in separate terminal)
 
    ```bash
+   cd CMPE281-Smartcity-Django
    python manage.py runserver
    ```
 
-4. **Access the Application**
+4. **Start React Frontend** (in separate terminal)
 
-   - Backend API: `http://localhost:8000`
-   - Admin Panel: `http://localhost:8000/admin`
+   ```bash
+   cd CMPE281-Smartcity-React
+   npm start
+   ```
 
 ## 🤖 AI Models & Capabilities
 
@@ -509,7 +564,17 @@ smartcity-backend/
 
 ## 🔧 Configuration
 
-### Database Settings
+### Frontend Configuration
+
+The React frontend can be configured through environment variables:
+
+```bash
+# Create .env file in CMPE281-Smartcity-React/
+REACT_APP_API_BASE_URL=http://localhost:8000
+REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+```
+
+### Backend Configuration
 
 Update `smartcity_backend/settings.py` with your database configurations:
 
@@ -537,9 +602,17 @@ CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 
 ## 🧪 Testing
 
-Run the test suite to ensure all components are working correctly:
+### Frontend Testing
 
 ```bash
+cd CMPE281-Smartcity-React
+npm test
+```
+
+### Backend Testing
+
+```bash
+cd CMPE281-Smartcity-Django
 python manage.py test
 ```
 
@@ -547,12 +620,28 @@ python manage.py test
 
 ### Production Considerations
 
-- Set `DEBUG = False` in production
+- Set `DEBUG = False` in Django settings
 - Use environment variables for sensitive data
 - Configure proper CORS settings
 - Set up SSL/TLS certificates
 - Use production-grade databases
 - Implement proper logging and monitoring
+
+### Frontend Deployment
+
+```bash
+cd CMPE281-Smartcity-React
+npm run build
+```
+
+The build output can be served by any static file server or CDN.
+
+### Backend Deployment
+
+- Use Gunicorn as WSGI server
+- Set up reverse proxy (Nginx/Apache)
+- Configure environment variables
+- Use production databases
 
 ### AWS EC2 Deployment
 
